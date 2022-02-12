@@ -31,4 +31,9 @@ if (typeof group !== 'string') {
 }
 </script>
 
-<template>{{ result }}</template>
+<template>
+  <template v-for="(group, i) in result" :key="i">
+    <h1 class="font-bold">{{ i }}. skupina</h1>
+    {{ group.toString() }}
+  </template>
+</template>
